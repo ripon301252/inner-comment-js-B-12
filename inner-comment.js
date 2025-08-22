@@ -12,30 +12,76 @@ body.appendChild(h1)
 
 // Order List create
 const ol = document.createElement('ol')
-ol.style.color = 'gray'
+ol.id = 'ol-title'
+// ol.style.color = 'gray'
 
 const li1 = document.createElement('li');
+li1.classList.add('item');
+li1.classList.add('courser');
 li1.innerText = 'Bandarban';
 
 ol.appendChild(li1);
 
 const li2 = document.createElement('li');
+li2.classList.add('item');
+li2.classList.add('courser');
 li2.innerText = 'SundarBan';
 ol.appendChild(li2);
 
 const li3 = document.createElement('li');
+li3.classList.add('item');
+li3.classList.add('courser');
 li3.innerText = 'Lalbag kella';
 ol.appendChild(li3);
 
 const li4 = document.createElement('li')
+li4.classList.add('item');
+li4.classList.add('courser');
 li4.innerText = 'Sonar gaa';
 ol.appendChild(li4)
 
 const li5 = document.createElement('li')
+li5.classList.add('item');
+li5.classList.add('courser');
 li5.innerText = 'Cox-Bazar';
 ol.appendChild(li5)
 
 body.appendChild(ol);
+
+
+
+// // button2 create
+const button2 = document.createElement('button');
+button2.id = 'add-title'
+button2.innerText = 'Add';
+button2.style.backgroundColor = 'gray';
+button2.style.padding = '5px 18px 5px 18px';
+button2.style.border = 'none';
+button2.style.fontSize = '18px'
+button2.style.color = 'white';
+button2.style.display = 'block';
+button2.style.marginTop = '10px';
+button2.style.marginBottom = '25px';
+button2.classList.add('courser');
+body.appendChild(button2);
+
+
+// removeChild
+document.getElementById('ol-title').addEventListener('click', function (e) {
+    e.target.parentNode.removeChild(e.target)
+})
+
+
+// new create
+document.getElementById('add-title').addEventListener('click', function () {
+    const ol = document.getElementById('ol-title');
+    const li = document.createElement('li');
+    li.classList.add('item');
+    li.classList.add('courser');
+    li.innerText = 'Brand new item added';
+    ol.appendChild(li);
+})
+
 
 
 // create another  span 
@@ -43,7 +89,7 @@ const span = document.createElement('span');
 span.innerText = 'All Comments'
 span.style.color = 'gray';
 span.style.fontSize = '20px';
-span.style.fontWeight = 'bold'
+span.style.fontWeight = 'bold';
 body.appendChild(span)
 
 
@@ -73,6 +119,7 @@ button.style.border = 'none';
 button.style.fontSize = '18px'
 button.style.color = 'white';
 button.style.display = 'block';
+button.classList.add('courser');
 body.appendChild(button)
 
 
@@ -82,9 +129,10 @@ document.getElementById('post-title').addEventListener('click', function () {
     const Comment = commentBox.value;
 
     const newComment = document.getElementById('new-comment');
+    newComment.classList.add('courser')
     const span = document.createElement('span')
 
-    newComment.addEventListener('click', function(e){
+    newComment.addEventListener('click', function (e) {
         e.target.parentNode.removeChild(e.target)
     })
 
@@ -106,32 +154,9 @@ document.getElementById('post-title').addEventListener('click', function () {
 
 
 
-// // button2 create
-// const button2 = document.createElement('button');
-// button2.id = 'add-title'
-// button2.innerText = 'Add';
-// button2.style.backgroundColor = 'gray';
-// button2.style.padding = '5px 18px 5px 18px';
-// button2.style.border = 'none';
-// button2.style.fontSize = '18px'
-// button2.style.color = 'white';
-// button2.style.display = 'block';
-// button2.style.marginTop = '10px';
-// body.appendChild(button2);
-
-
-// button 1 time use
-// document.getElementById('add-title').addEventListener('click', function(){
-//     const seat = document.getElementById('new-comment');
-//     seat.innerText = 'Seat no. 1';
-
-// })
 
 
 
 
 
-// div.style.width = '334px';
-// div.style.height = '300px';
-// div.style.border = '1px solid red'
 
